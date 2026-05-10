@@ -3,21 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>한솔어린이보육재단 한솔이음시스템 정보입력</title> 
-    
+    <!-- 탭에 표시될 타이틀 -->
+    <title>한솔어린이보육재단</title> 
     <style>
         body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden;
-            background-color: #f4f5f7;
-            /* 1. 텍스트 선택 및 드래그 방지 추가 */
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
+            overflow: hidden; /* 이중 스크롤 방지 */
+            background-color: #f4f5f7; /* 배경색 (필요시 수정) */
         }
         iframe {
             width: 100%;
@@ -25,26 +20,9 @@
             border: none;
         }
     </style>
-
-    <script>
-        // 2. 통합 보안 스크립트 (head 내부에 배치)
-        document.addEventListener('keydown', function(event) {
-            // F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U 차단
-            const forbiddenKeys = [123, 73, 74, 85];
-            if (forbiddenKeys.includes(event.keyCode) && (event.ctrlKey || event.shiftKey || event.keyCode === 123)) {
-                event.preventDefault();
-                return false;
-            }
-        });
-
-        // 우클릭 방지
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        }, false);
-    </script>
 </head>
 <body>
-    <!-- 3. iframe 삽입 -->
+    <!-- 전달해주신 GAS 주소 삽입 -->
     <iframe src="https://script.google.com/macros/s/AKfycbyUEEQmvQxLjqS5r7kUAvtsSJ9tdoYi3eljDuLpQvn6VMWxJ425Nov8e-v0xwxRh6whfQ/exec"></iframe>
 </body>
 </html>
